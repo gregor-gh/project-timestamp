@@ -49,7 +49,7 @@ app.get("/api/timestamp/:datetime",(req,res) => {
     res.json({error: "Invalid Date"});
   else
     res.json({unix: unix, utc: utc.toUTCString()});
-
+});
 // listen for requests :)
 var listener = app.listen(process.env.PORT || 3000, function () {
   console.log('Your app is listening on port ' + listener.address().port);
