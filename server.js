@@ -48,7 +48,7 @@ app.get("/api/timestamp/:datetime",(req,res) => {
   if (utc=="Invalid Date")
     res.json({error: "Invalid Date"});
   else
-    res.json({unix: unix, utc: utc.toUTCString()});
+    res.json({unix: Number(unix), utc: utc.toUTCString()});
 });
 // listen for requests :)
 var listener = app.listen(process.env.PORT || 3000, function () {
